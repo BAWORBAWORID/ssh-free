@@ -9,8 +9,12 @@ RUN apt-get update && \
 # Create an SSH user
 ARG SSH_USER=fazza
 ARG SSH_PASSWORD=12345678
-RUN useradd -m -s /bin/bash ${SSH_USER} && \
-    echo "${SSH_USER}:${SSH_PASSWORD}" | chpasswd
+#RUN useradd -m -s /bin/bash ${SSH_USER} && \
+#    echo "${SSH_USER}:${SSH_PASSWORD}" | chpasswd
+
+RUN useradd -m -d /home/dockeruser -s /bin/bash dockeruser && \
+    echo 'dockeruser:dockerpassword' | chpasswd
+
 
 # Expose SSH port
 EXPOSE 22
