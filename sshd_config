@@ -1,5 +1,5 @@
 # SSH Server Configuration
-PermitRootLogin yes
+PermitRootLogin no
 PasswordAuthentication yes
 ChallengeResponseAuthentication no
 UsePAM yes
