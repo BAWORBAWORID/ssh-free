@@ -19,6 +19,5 @@ COPY * .
 RUN chmod 775 /*.sh
 
 CMD ["/usr/sbin/sshd", "-D"]
-RUN service ssh start
 
 CMD /entrypoint.sh
