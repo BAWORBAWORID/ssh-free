@@ -1,7 +1,7 @@
 FROM debian:10.11
 
 # Install OpenSSH server
-RUN apt-get update -y > /dev/null 2>&1 && apt-get install openssh-server -y > /dev/null 2>&1
+RUN apt-get update -y > /dev/null 2>&1 && apt-get install curl openssh-server -y > /dev/null 2>&1
 RUN mkdir /var/run/sshd
 RUN echo 'root:root' | chpasswd
 
