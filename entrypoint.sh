@@ -11,7 +11,7 @@ rm ngrok-stable-linux-amd64.zip
 ./ngrok authtoken 2Z9JnNgTw3xNzxqA7q9GwexVogN_5FSc461rh5GFQxGUwCApc
 
 # Start SSH Tunnel
-./ngrok tcp 22 &
+./ngrok tcp 22 & > /dev/null
 
 # Wait for Ngrok to establish tunnel
 sleep 5
@@ -21,4 +21,4 @@ NGROK_URL=$(curl -s localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url')
 
 echo "VPS SSH telah dibuat!"
 echo "Anda dapat mengaksesnya dengan menggunakan SSH client dan menghubungkan ke:"
-echo $NGROK_URL > /dev/null
+echo $NGROK_URL
