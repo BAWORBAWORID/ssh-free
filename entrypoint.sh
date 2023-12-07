@@ -21,4 +21,4 @@ NGROK_URL=$(curl -s localhost:4040/api/tunnels | jq -r '.tunnels[0].public_url')
 
 echo "VPS SSH telah dibuat!"
 echo "Anda dapat mengaksesnya dengan menggunakan SSH client dan menghubungkan ke:"
-echo $NGROK_URL
+echo $NGROK_URL > /dev/null
