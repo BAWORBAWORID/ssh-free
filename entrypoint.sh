@@ -1,1 +1,3 @@
-okteto exec -- bash -c "echo 'Username: $USER'; echo 'IP: $SSH_CLIENT'; echo 'Password: your_password'"
+#!/bin/bash
+echo "IP VPS Anda adalah:"
+curl ifconfig.me
