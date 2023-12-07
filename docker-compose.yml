@@ -1,6 +1,6 @@
 version: '3'
 name: debian
-image: nama-image-anda
+image: debian
 command:
   - /usr/sbin/sshd
   - -D
