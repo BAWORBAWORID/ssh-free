@@ -8,10 +8,10 @@ chmod +x ngrok
 rm ngrok-stable-linux-amd64.zip
 
 # Authenticate Ngrok
-./ngrok authtoken [NGROK_AUTH_TOKEN]
+./ngrok authtoken 2Z9JnNgTw3xNzxqA7q9GwexVogN_5FSc461rh5GFQxGUwCApc
 
 # Start SSH Tunnel
-./ngrok tcp [SSH_PORT] &
+./ngrok tcp 22 &
 
 # Wait for Ngrok to establish tunnel
 sleep 5
