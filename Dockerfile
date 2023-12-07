@@ -15,6 +15,7 @@ RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 EXPOSE 22
 
+COPY * .
 
 CMD ["/usr/sbin/sshd", "-D"]
 RUN service ssh start
