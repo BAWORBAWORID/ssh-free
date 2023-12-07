@@ -1,10 +1,5 @@
-version: '3'
 name: debian
-image: debian
-command:
-  - /usr/sbin/sshd
-  - -D
+image: debian:10.11
+command: ["/usr/sbin/sshd", "-D"]
 forward:
   - 22:22
-volumes:
-  - .:/app
