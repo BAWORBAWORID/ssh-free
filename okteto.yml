@@ -1,3 +1,0 @@
-name: debian-ssh-container
-image: debian-ssh
-command: ["/usr/sbin/sshd", "-D"]
