@@ -1,9 +1,10 @@
 version: '3'
-services:
-  debian-ssh:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "2222:22"  # Map host port 2222 to container port 22
-    container_name: debian-ssh-container
+name: debian
+image: nama-image-anda
+command:
+  - /usr/sbin/sshd
+  - -D
+forward:
+  - 22:22
+volumes:
+  - .:/app
