@@ -1,5 +1,18 @@
-name: my-app
-command:
-  - /openssh.sh
+
+version: "3.9"
+services:
+  web:
+    build: .
+    restart: always
+    ports:
+      - "8000:5000"
+    volumes:
+      - .:/code
+      - logvolume01:/var/log
+    depends_on:
+      - redis
+  redis:
+    image: redis
+    restart: always
 volumes:
-  - .:/app
+  logvolume01: {}
