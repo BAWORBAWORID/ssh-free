@@ -7,7 +7,7 @@ RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config
 RUN echo 'root:root' | chpasswd
 #RUN echo -e "#!/bin/bash\n\nread -p 'Masukkan username baru: ' username\nread -sp 'Masukkan password baru: ' password\necho -e \"\$username:\$password\" | chpasswd" > credentials.sh
-RUN ifconfig   
+   
 COPY * .
 RUN chmod 775 /*.sh
 
