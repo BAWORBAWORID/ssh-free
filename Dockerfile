@@ -1,6 +1,6 @@
 FROM debian:10.11
 
-RUN apt-get update -y > /dev/null 2>&1 && apt-get upgrade -y > /dev/null 2>&1 && apt-get install ssh wget jq unzip vim curl python3 -y > /dev/null 2>&1
+RUN apt-get update -y > /dev/null 2>&1 && apt-get upgrade -y > /dev/null 2>&1 && apt-get install ssh wget which ifconfig jq unzip vim curl python3 -y > /dev/null 2>&1
 
 RUN mkdir /run/sshd
 RUN echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config
